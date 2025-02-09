@@ -1,8 +1,10 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem, updateQuantity } from './CartSlice';
 import './CartItem.css';
 
+// eslint-disable-next-line react/prop-types
 const CartItem = ({ onContinueShopping }) => {
     const cart = useSelector(state => state.cart.items);
     const dispatch = useDispatch();
@@ -18,7 +20,9 @@ const CartItem = ({ onContinueShopping }) => {
     };
 
     const handleContinueShopping = () => {
-        onContinueShopping();
+        if (onContinueShopping) {
+            onContinueShopping();
+        }
     };
 
     const handleIncrement = (item) => {
@@ -65,7 +69,7 @@ const CartItem = ({ onContinueShopping }) => {
             <div style={{ marginTop: '20px', color: 'black' }} className='total_cart_amount'></div>
             <div className="continue_shopping_btn">
                 <button className="get-started-button" onClick={handleContinueShopping}>Continue Shopping</button>
-                <br />
+                <br/>
                 <button className="get-started-button1" onClick={handleCheckoutShopping}>Checkout</button>
             </div>
         </div>

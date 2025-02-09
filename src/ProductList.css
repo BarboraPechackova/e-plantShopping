@@ -170,28 +170,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*width: 800px;*/
     font-size: 19px;
     gap: 2em;
 }
 .cart{
     color: white;
     display: flex;
+    padding-right: 20px;
 }
 .cart_quantity_count{
-    margin-top: 16px;
-    /* background-color: red; */
-    margin-left: 27px;
+    /*margin-top: 16px;*/
+    margin-left: 47px;
     position: absolute;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     top: 0;
+    padding: 2px 9px;
+    border-radius: 100%;
+    background-color: darkslategray;
 
 }
 .plantname_heading{
    display: flex;
    align-items: center;
    justify-content: center;
-    /* background-color: yellow; */
 }
 .plant_heading{
     width: 400px;

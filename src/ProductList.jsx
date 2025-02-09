@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState,useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import './ProductList.css'
@@ -8,7 +9,7 @@ function ProductList() {
     const dispatch = useDispatch();
     const cart = useSelector(state => state.cart.items);  // Get current cart items from Redux
     const [showCart, setShowCart] = useState(false); 
-    const [showPlants, setShowPlants] = useState(false); // State to control the visibility of the About Us page
+    const [, setShowPlants] = useState(false); // State to control the visibility of the About Us page
     const [addedToCart, setAddedToCart] = useState({});
 
     // Calculate total number of items in the cart
@@ -247,32 +248,22 @@ function ProductList() {
     alignItems: 'center',
     fontSize: '20px',
    }
-   const styleObjUl={
-    display: 'flex',
-    // justifyContent: 'space-between',
-    // alignItems: 'center',
-    // width: '100%',
-   }
    const styleA={
     color: 'white',
     fontSize: '2rem',
     fontWeight: '400',
     textDecoration: 'none',
    }
-   const handleCartClick = (e) => {
-    e.preventDefault();
-    setShowCart(true); // Set showCart to true when cart icon is clicked
-};
-const handlePlantsClick = (e) => {
-    e.preventDefault();
-    setShowPlants(true); // Set showAboutUs to true when "About Us" link is clicked
-    setShowCart(false); // Hide the cart when navigating to About Us
-};
 
-   const handleContinueShopping = (e) => {
-    e.preventDefault();
-    setShowCart(false);
-  };
+    const handlePlantsClick = (e) => {
+        e.preventDefault();
+        setShowPlants(true); // Set showAboutUs to true when "About Us" link is clicked
+        setShowCart(false); // Hide the cart when navigating to About Us
+    };
+
+    const handleContinueShopping = () => {
+        setShowCart(false); // Ensure the cart is hidden and user is taken back to product list
+    };
     return (
         <div>
              <div className="navbar" style={styleObj}>
@@ -337,7 +328,7 @@ const handlePlantsClick = (e) => {
             ))}
         </div>
         ) : (
-            <CartItem onContinueShopping={handleContinueShopping}/>
+            <CartItem onContinueShopping={handleContinueShopping} />
         )}
         </div>
     );
