@@ -157,8 +157,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 650px;
+    /*width: 800px;*/
     font-size: 19px;
+    gap: 2em;
 }
 .cart{
     color: white;
@@ -193,6 +194,12 @@ body {
     .product-card {
         flex: 1 1 calc(50% - 20px); /* Adjust width for 2 cards per row with 20px gap on smaller screens */
         max-width: calc(50% - 20px); /* Adjust max-width for 2 cards per row with 20px gap on smaller screens */
+    }
+
+    .navbar-container {
+        width: 10em !important;
+        display: flex !important;
+        justify-content: center !important;
     }
 }
 /* ProductList.css */
@@ -238,6 +245,7 @@ body {
       .tag {
         margin-bottom: 20px; /* Add margin bottom for spacing */
         text-align: center; /* Align text to the center */
+          width: 20em;
       }
     
       .ul {
@@ -250,3 +258,10 @@ body {
         text-align: center; /* Align text to the center */
       }
   }
+
+
+.navbar-container {
+    width: 20em;
+    display: flex;
+    justify-content: flex-end;
+}
