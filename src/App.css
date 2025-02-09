@@ -34,6 +34,7 @@
   backdrop-filter: blur(4px);
   background-color: rgba(0,0,0,0.5);
   gap: 5em;
+  font-family: system-ui;
 }
 
 .landing_content {
@@ -66,7 +67,7 @@
 }
 
 .content p {
-  font-size: 25px;
+  font-size: 1.4rem;
 }
 
 .divider {
