@@ -1,6 +1,6 @@
 # e-plantShopping React project
 
-- Finished this final project of the course.
+- Finished the final project of the course.
 - Learned to use React Hooks, Redux and many more.
 - Improved overall UI and styling.
 
